@@ -1,6 +1,9 @@
 package library;
 
-public class User {//declare variables
+import creational.LibraryItemFactory;
+import observer.subscriber;
+
+public class User implements subscriber{//declare variables
 	private int ID;
 	private String name;
 	private String role;
@@ -44,5 +47,8 @@ public class User {//declare variables
 		System.out.println("role is " + role);
 		System.out.println("gender is " + gender);
 	}
-	
+
+	public void update (LibraryItemFactory c){
+		System.out.println("The library item " + c.toString() + "is now available to rent.");
+	}
 }
